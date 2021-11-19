@@ -42,7 +42,7 @@ async function run() {
         app.get('/orders', async (req, res) => {
             const cursor = ordersCollection.find({})
             const order = await cursor.toArray()
-            res.send(order);
+            res.json(order);
         })
 
         //Review Post API
@@ -60,14 +60,15 @@ async function run() {
         app.get('/reviews', async (req, res) => {
             const cursor = reviewCollection.find({})
             const review = await cursor.toArray()
-            res.send(review);
+            res.json(review);
         })
 
         // GET API
         app.get('/services', async (req, res) => {
             const cursor = usersCollection.find({});
             const services = await cursor.toArray();
-            res.send(services);
+            res.json(services)
+            // res.send(services);
         });
 
         // GET Single Service
