@@ -35,6 +35,7 @@ async function run() {
             console.log('hit the api', order);
             const result = await ordersCollection.insertOne(order);
             console.log(result)
+            console.log('this is editable comment')
             res.json(result)
         });
 
@@ -144,3 +145,12 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log('Running goriber gari Server on port', port);
 })
+
+const [datas, setDatas] = useState({})
+{
+    datas.map(data => <Data
+        data={data}
+    >
+    </Data>
+    )
+}
