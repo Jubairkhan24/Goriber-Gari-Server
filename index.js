@@ -35,7 +35,6 @@ async function run() {
             console.log('hit the api', order);
             const result = await ordersCollection.insertOne(order);
             console.log(result)
-            console.log('this is editable comment')
             res.json(result)
         });
 
